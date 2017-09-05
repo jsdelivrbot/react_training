@@ -1,0 +1,5 @@
+Section 1 - Lesson 4
+
+Boiler Plate project:
+
+Project files (Components, REACT.js, Redux.js which are libraries) -> TOOLING (transpose/transpile with webpack + babel)-> spits out index.html / application.js / style.css which is necessary for a SINGLE_PAGE_APPLICATION
