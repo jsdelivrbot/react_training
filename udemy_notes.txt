@@ -1,5 +1,74 @@
-Section 1 - Lesson 4
+Section 1 - Lesson 4 (Environment Set-up)
 
 Boiler Plate project:
 
 Project files (Components, REACT.js, Redux.js which are libraries) -> TOOLING (transpose/transpile with webpack + babel)-> spits out index.html / application.js / style.css which is necessary for a SINGLE_PAGE_APPLICATION
+
+Section 1 - Lesson 5 (Project Set-up)
+
+We're basically building a YOUTUBE clone using only REACT (not redux).
+* Search Bar
+* Videos on the right hand side
+* Video Player in the middle
+* Video Title and the Description in the current video
+
+Type npm start -- this starts the local package and starts up a local server. You can access everything on localhost:8080
+
+REMEMBER!
+Project Files --> (transpose/transpiled with webpack + babel) --> spits out index.html/ application.js / style.css (es5) for a SPA (single-page application)
+
+Section 1 - Lesson 6 (A Taste of JSX)
+
+When you open index.html, you'll notice that there's a "bundle.js". This is the compiled JS for all the src files (i.e. this is the output of babel).
+
+React is made up of components and view.
+
+- Component is something that produces HTML
+- In react, we create multiple components and nest them inside of each other
+- "Const" is es6 (2016) syntax
+
+var = blah declares a variable
+const App -- we're declaring a constant that would never be reassigned down the line
+HTML inside of a function is actually called ***JSX*** . This gets translated by webpack/babel
+
+Section 1 - Lesson 7 (More on JSX)
+
+babel translates jsx into regular es5 PLAIN javascripts
+So our function, <div>Hi1</div> becomes return React.createElement("div", null, "Hi!")
+The purpose of JSX is to make our components a lot more clean and legible
+
+Section 1 - Lesson 8 (ES6 Import Statements)
+
+Modern Javascript is done in silos -- they are self-contained modules
+If you want access to REACT, you need to explicitly form the connection to REACT
+Looks like this: import React from 'react';
+
+Section 1 - Lesson 9 (ReactDOM vs React)
+
+So it looks like REACT has diverged into separate libraries
+- React which is the core React libraries
+- React-dom which is for rendering stuff on the DOM
+
+Section 1 - Lesson 10 (Differences between Component Instances and Classes)
+const App is creating CLASS, which is kind of like a factory used to create multiple instances
+ReactDOM.render() is expecting a component element // instantiating components before rendering them in the DOM
+
+EASY! If component (which is a class) is called App, you're basically writing this:
+<App></App> OR <App />
+
+
+Section 1 - Lesson 11 (Render Targets)
+Troubleshooting Target Container is not a DOM element
+- IF you just ReactDOM.render(<COMPONENT>), the translation happens, however the browser doesn't know where to render the DOM element.
+- Just add another parameter in the render() statement.
+
+ReactDOM.render(<COMPONENT />, TARGET );
+ReactDOM.redner(<App />, document.querySelector('.container'));
+
+
+*ES6 SYNTAX*
+Instead of function () {}, you can do this:
+
+const App = () => {
+  return <div>Hi!</div>;
+}
